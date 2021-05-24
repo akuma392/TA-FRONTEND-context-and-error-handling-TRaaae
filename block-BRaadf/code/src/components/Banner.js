@@ -1,14 +1,24 @@
-import React from "react";
+import React from 'react';
+import ThemeContext from './Context';
 
 class Banner extends React.Component {
+  static contextType = ThemeContext;
+
+  componentDidMount() {
+    const isDarkMode = this.context;
+
+    console.log(isDarkMode); // { name: 'Tania', loggedIn: true }
+  }
+
   render() {
-    let { isDarkMode } = this.props;
+    let { isDarkMode } = this.context;
+    console.log(isDarkMode, 'banner');
     return (
       <div
         className={
           isDarkMode
-            ? "message-dark message--banner message--success"
-            : "message message--banner message--success"
+            ? 'message-dark message--banner message--success'
+            : 'message message--banner message--success'
         }
       >
         <h3 className="message-heading">This is a success banner!</h3>

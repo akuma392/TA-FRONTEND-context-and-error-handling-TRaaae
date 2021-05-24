@@ -1,7 +1,7 @@
-import Banner from "./Banner";
-import Cards from "./Cards";
-import Paragraph from "./Paragraph";
-import Title from "./Title";
+import Banner from './Banner';
+import Cards from './Cards';
+import Paragraph from './Paragraph';
+import Title from './Title';
 
 function Main({ isDarkMode }) {
   return (
@@ -11,7 +11,8 @@ function Main({ isDarkMode }) {
       <Title text="Card Component" isDarkMode={isDarkMode} />
       <Cards />
       <Title text="Banner Component" isDarkMode={isDarkMode} />
-      <Banner isDarkMode={isDarkMode} />
+      {/* <Banner isDarkMode={isDarkMode} /> */}
+      <Banner />
     </>
   );
 }
